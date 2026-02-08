@@ -1,0 +1,1 @@
+Natural language processing(NLP) is the processing ofnatural languageinformation by acomputer. NLP is a subfield ofcomputer scienceand is closely associated withartificial intelligence. NLP is also related toinformation retrieval,knowledge representation,computational linguistics, andlinguisticsmore broadly.[1]
