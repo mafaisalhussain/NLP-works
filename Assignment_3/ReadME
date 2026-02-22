@@ -3,71 +3,74 @@
 
 ---
 
-##  Overview
+## Overview
+This project demonstrates a basic Natural Language Processing (NLP) workflow using a real-world news article. The notebook retrieves article text, processes it into sentences, converts sentences into numerical representations, and measures semantic similarity using a pre-trained transformer model.
 
-This assignment demonstrates how to fetch real-world news article text, process it using NLP techniques, and compute semantic similarity between sentences using pre-trained transformer embeddings.
-
-The article used is the Washington Post's coverage of the Air India plane crash survivor Vishwash Kumar Ramesh (June 13, 2025).
+The article analyzed is a Washington Post report on the Air India plane crash survivor Vishwash Kumar Ramesh (June 13, 2025).
 
 ---
 
+## Requirements
 
-## ⚙️ Requirements
+Install dependencies:
 
-Install all dependencies by running the first cell in the notebook, or manually via:
-```bash
 pip install sentence-transformers nltk newspaper3k lxml_html_clean scikit-learn matplotlib seaborn
-```
 
-| Library | Purpose |
-|---|---|
-| `newspaper3k` | Fetches and parses the article |
-| `nltk` | Sentence tokenization |
-| `sentence-transformers` | Pre-trained embedding model |
-| `scikit-learn` | TF-IDF vectorization & cosine similarity |
-| `matplotlib` / `seaborn` | Similarity heatmap visualization |
+### Libraries Used
+- newspaper3k — article retrieval and parsing
+- nltk — sentence tokenization
+- sentence-transformers — pre-trained embedding model
+- scikit-learn — TF-IDF vectorization and cosine similarity
+- matplotlib / seaborn — similarity visualization
 
 ---
 
-##  How to Run
+## How to Run
 
 1. Open `DATA622_HW3.ipynb` in Jupyter Notebook or JupyterLab
-2. Run cells **top to bottom**, one at a time
-3. Each cell corresponds to one step of the assignment
+2. Run all cells from top to bottom
+3. Each section corresponds to a step in the assignment
 
 ---
 
-## 📋 Assignment Steps
+## Assignment Tasks
 
-### Step 1 — Read the Article
-Fetches the Washington Post article using `newspaper3k`'s `Article` class, which bypasses the client-side paywall by retrieving raw HTML before JavaScript executes. Loads the first **700 characters** of the article body.
+### 1. Read the Article
+The notebook retrieves the news article and loads the first 700 characters of the text.
 
-### Step 2 — Split into Sentences
-Uses NLTK's `sent_tokenize()` to split the 700-character text into individual sentences.
+### 2. Sentence Tokenization
+The text is split into sentences using NLTK’s `sent_tokenize()`.
 
-### Step 3 — Load Models
-- **3A:** Loads the pre-trained `all-MiniLM-L6-v2` model from `sentence-transformers` — a lightweight BERT-based model producing 384-dimensional embeddings
-- **3B:** Applies `TfidfVectorizer` from `scikit-learn` to the first 10 sentences, printing the matrix shape and feature vocabulary
+### 3. Feature Representation
+Two types of representations are created:
+- TF-IDF vectors for the first 10 sentences
+- Transformer sentence embeddings using the `all-MiniLM-L6-v2` model (384-dimensional vectors)
 
-### Step 4 — Generate Embeddings
-Encodes all sentences into dense vector embeddings using the transformer model. Prints the shape of the first sentence's embedding `(384,)`.
+### 4. Sentence Embeddings
+Each sentence is encoded into a dense numerical vector.  
+The first sentence embedding has shape: (384,)
 
-### Step 5 — Compute Cosine Similarity
-Calculates the cosine similarity score between Sentence 1 and Sentence 2 embeddings and interprets the result as High / Moderate / Low similarity.
-
-
-
-## ⚠️ Known Notes
-
-- **`position_ids UNEXPECTED` warning** — This is a harmless version mismatch warning from the `transformers` library and does not affect model performance or results. It can be safely ignored.
-- **Paywall** — `newspaper3k` successfully retrieves article content because it fetches raw HTML before JavaScript-based paywalls load. Full content availability may vary.
+### 5. Cosine Similarity
+Cosine similarity is computed between the first and second sentence to measure semantic similarity.
 
 ---
 
-## 👤 Course Info
+## Learning Outcomes
+This project demonstrates:
+- Web text extraction
+- Sentence tokenization
+- TF-IDF representation
+- Transformer-based embeddings
+- Semantic similarity measurement using cosine similarity
 
-| | |
-|---|---|
-| **Course** | DATA 622 |
-| **Assignment** | Homework 3 |
-| **Topic** | NLP — Sentence Embeddings & Cosine Similarity |
+---
+
+## Course Information
+Course: DATA 622  
+Assignment: Homework 3  
+Topic: NLP — Sentence Embeddings & Similarity
+
+---
+
+## License
+This repository is for educational purposes only.
