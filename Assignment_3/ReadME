@@ -1,14 +1,13 @@
 # DATA 622 — Homework 3
 ## Sentence Embeddings & Similarity Analysis
 
----
 
 ## Overview
 This project demonstrates a basic Natural Language Processing (NLP) workflow using a real-world news article. The notebook retrieves article text, processes it into sentences, converts sentences into numerical representations, and measures semantic similarity using a pre-trained transformer model.
 
 The article analyzed is a Washington Post report on the Air India plane crash survivor Vishwash Kumar Ramesh (June 13, 2025).
 
----
+
 
 ## Requirements
 
@@ -23,7 +22,7 @@ pip install sentence-transformers nltk newspaper3k lxml_html_clean scikit-learn 
 - scikit-learn — TF-IDF vectorization and cosine similarity
 - matplotlib / seaborn — similarity visualization
 
----
+
 
 ## How to Run
 
@@ -31,7 +30,7 @@ pip install sentence-transformers nltk newspaper3k lxml_html_clean scikit-learn 
 2. Run all cells from top to bottom
 3. Each section corresponds to a step in the assignment
 
----
+
 
 ## Assignment Tasks
 
@@ -53,7 +52,7 @@ The first sentence embedding has shape: (384,)
 ### 5. Cosine Similarity
 Cosine similarity is computed between the first and second sentence to measure semantic similarity.
 
----
+
 
 ## Learning Outcomes
 This project demonstrates:
@@ -63,14 +62,13 @@ This project demonstrates:
 - Transformer-based embeddings
 - Semantic similarity measurement using cosine similarity
 
----
 
 ## Course Information
 Course: DATA 622  
 Assignment: Homework 3  
 Topic: NLP — Sentence Embeddings & Similarity
 
----
+
 
 ## License
 This repository is for educational purposes only.
