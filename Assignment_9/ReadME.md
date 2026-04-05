@@ -178,18 +178,9 @@ python -m nltk.downloader punkt_tab punkt stopwords
 
 ---
 
-## 👤 Author
-**DATA 622 — Machine Learning at Scale**  
-Homework 9 | NLP Sentiment, Intent & Emotion Analysis  
-*Spring 2025*
+## 👤 Abdul Faisal Hussain Mohammed
+**DATA 622 **  
+NLP Sentiment, Intent & Emotion Analysis  
+mafaisalhussain017@gmail.com
 """
 
-# Write to file
-with open('README.md', 'w') as f:
-    f.write(readme_content)
-
-print("✅ README.md generated successfully!")
-print(f"   Characters : {len(readme_content)}")
-print(f"   Lines      : {len(readme_content.splitlines())}")
-print("\n📌 To download from Colab:")
-print("   Files panel (left sidebar) → right-click README.md → Download")
